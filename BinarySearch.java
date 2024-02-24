@@ -4,7 +4,7 @@ public class BinarySearch {
         int right = arr.length - 1;
         
         while (left <= right) {
-            int mid = left + (right - left) / 2;
+            int mid =  (left + right) / 2;
             
             if (arr[mid] == target) {
                 return mid;
@@ -20,7 +20,7 @@ public class BinarySearch {
     
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 7, 9, 11, 13};
-        int target = 14;
+        int target = 13;
         int result = binarySearch(arr, target);
         if (result != -1) {
             System.out.println("Element found at index: " + result);
